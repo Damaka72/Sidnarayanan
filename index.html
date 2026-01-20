@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sid Narayanan | Leadership Development & Organizational Transformation Consultant</title>
+    <title>Sidharth (Sid) Narayanan | Principal Commercial Transformation Consultant</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -130,9 +130,16 @@
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto 2rem;
             animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero .rate {
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-top: 1rem;
+            font-weight: 600;
         }
 
         @keyframes fadeInUp {
@@ -201,6 +208,26 @@
             color: var(--grey);
         }
 
+        .about-text ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about-text li {
+            padding: 0.75rem 0;
+            color: var(--grey);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .about-text li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -217,7 +244,7 @@
         }
 
         .stat-box .number {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--gold);
             font-weight: 700;
             font-family: 'Montserrat', sans-serif;
@@ -226,16 +253,48 @@
         .stat-box .label {
             color: var(--navy);
             font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        /* Services Grid */
-        .services-grid {
+        /* Value Proposition */
+        .value-prop {
+            background: var(--navy);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .value-prop h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .value-prop ul {
+            list-style: none;
+        }
+
+        .value-prop li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .value-prop li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
+        .expertise-card {
             background: white;
             padding: 2.5rem;
             border-radius: 10px;
@@ -243,12 +302,12 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .service-card:hover {
+        .expertise-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
 
-        .service-card .icon {
+        .expertise-card .icon {
             width: 60px;
             height: 60px;
             background: var(--gold);
@@ -261,29 +320,28 @@
             color: white;
         }
 
-        .service-card h3 {
+        .expertise-card h3 {
             color: var(--navy);
             margin-bottom: 1rem;
         }
 
-        .service-card p {
+        .expertise-card p {
             color: var(--grey);
             margin-bottom: 1.5rem;
         }
 
-        .service-card ul {
+        .expertise-card ul {
             list-style: none;
-            margin-bottom: 1.5rem;
         }
 
-        .service-card li {
+        .expertise-card li {
             padding: 0.5rem 0;
             color: var(--grey);
             padding-left: 1.5rem;
             position: relative;
         }
 
-        .service-card li:before {
+        .expertise-card li:before {
             content: "✓";
             position: absolute;
             left: 0;
@@ -291,107 +349,50 @@
             font-weight: bold;
         }
 
-        /* Methodology */
-        .methodology-steps {
+        /* Key Achievements */
+        .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .step {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--gold);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-        }
-
-        .step h4 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-        }
-
-        .step p {
-            color: var(--grey);
-        }
-
-        /* Experience Section */
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .experience-card {
+        .achievement-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
             border-left: 4px solid var(--gold);
-        }
-
-        .experience-card h3 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-        }
-
-        .experience-card ul {
-            list-style: none;
-        }
-
-        .experience-card li {
-            padding: 0.5rem 0;
-            color: var(--grey);
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .experience-card li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-        }
-
-        /* Results Section */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .result-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .result-box .metric {
-            font-size: 2.5rem;
+        .achievement-card .tag {
             color: var(--gold);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-box .description {
-            color: var(--navy);
             font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
         }
 
+        .achievement-card h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card p {
+            color: var(--grey);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-card .impact {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 1rem;
+        }
+
+        /* Case Studies */
         .case-studies {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -400,20 +401,33 @@
 
         .case-study {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 10px;
             border-top: 4px solid var(--gold);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .case-study .industry {
+        .case-study .sector {
             color: var(--gold);
             font-weight: 600;
             margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         .case-study h4 {
             color: var(--navy);
             margin-bottom: 1rem;
+        }
+
+        .case-study .challenge {
+            margin-bottom: 1.5rem;
+        }
+
+        .case-study .challenge-label {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
         }
 
         .case-study p {
@@ -423,9 +437,58 @@
 
         .case-study .outcome {
             background: var(--light);
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 5px;
+            margin-top: 1.5rem;
+        }
+
+        .case-study .outcome-label {
             font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Methodologies */
+        .methodologies {
+            background: var(--navy);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .methodologies h3 {
+            color: var(--gold);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .methodologies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .methodology-item {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .methodology-item:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .methodology-item h4 {
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .methodology-item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Contact Section */
@@ -464,6 +527,10 @@
         .contact-item p {
             color: var(--grey);
             margin: 0;
+        }
+
+        .contact-item strong {
+            color: var(--navy);
         }
 
         .contact-form input,
@@ -562,6 +629,11 @@
             .hero {
                 padding: 8rem 2rem 4rem;
             }
+
+            .achievements-grid,
+            .case-studies {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -572,10 +644,9 @@
             <div class="logo">Sid<span>Narayanan</span></div>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#methodology">Approach</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#contact" class="cta-button">Get In Touch</a></li>
             </ul>
         </nav>
@@ -584,9 +655,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Sid Narayanan</h1>
-            <p class="subtitle">Leadership Development & Organizational Transformation Consultant</p>
-            <p>Empowering leaders and organizations to achieve sustainable growth through strategic leadership development, organizational transformation, and performance excellence.</p>
+            <h1>Sidharth (Sid) Narayanan</h1>
+            <p class="subtitle">Principal Commercial Transformation Consultant</p>
+            <p>I design commercial frameworks, governance structures, and procurement strategies for complex, high-stakes projects across rail infrastructure, government digital transformation, and transport. £350M+ in delivered value, methodologies that become industry standards, and a track record of staying calm when deadlines cannot move and millions of people are affected by the outcome.</p>
             <a href="#contact" class="cta-button">Schedule a Consultation</a>
         </div>
     </section>
@@ -597,257 +668,366 @@
             <div class="section-header">
                 <h2>About Sid</h2>
                 <div class="line"></div>
-                <p>Transforming Organizations Through Leadership Excellence</p>
+                <p>The journey from doubt to delivering £350M+ in commercial value</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Leadership Development Expert</h3>
-                    <p>With over 15 years of experience in leadership development and organizational transformation, I specialize in helping executives, teams, and organizations unlock their full potential and achieve measurable results.</p>
-                    <p>My approach combines proven methodologies with practical, actionable strategies tailored to your unique organizational challenges. I work with clients across industries to develop leadership capabilities, drive cultural change, and build high-performing teams.</p>
-                    <p>Whether you're a C-suite executive looking to enhance your leadership impact, or an organization seeking to transform your culture and performance, I provide the expertise and support to make it happen.</p>
+                    <h3>We Did Alright</h3>
+                    <p>I'll be honest with you - I wasn't always the guy delivering £350M+ commercial transformations. I'm someone who had to repeat GCSEs, felt the sting of coming up short, then pushed through to prove what I could actually do. That journey taught me something valuable: the people who doubt themselves the most often have the most to offer.</p>
+                    <p>Over 12 years, I've designed and delivered commercial frameworks, governance structures, and procurement strategies across rail infrastructure nationalisation, government digital transformation, and transport. My frameworks become industry standards - organisations are still using methodologies I created years ago. But here's what really matters: I understand what it's like to be in the room not entirely sure you belong there. And I use that to do better work.</p>
+                    <p>I work across London and Stockholm, bringing an international perspective to complex UK projects. Whether it's navigating Department for Transport regulations or managing Cabinet Office stakeholders, I bring both the technical expertise and the human understanding that high-stakes transformation requires.</p>
+                    <p><strong>What I Do:</strong></p>
+                    <ul>
+                        <li>Commercial Transformation Strategy (nationalisation, M&A, corporate restructure)</li>
+                        <li>Framework Design & Value Optimisation (£200K+ annual value generation)</li>
+                        <li>Regulatory Compliance & Governance (DfT, Cabinet Office, multi-regulator environments)</li>
+                        <li>Enterprise Technology Procurement Strategy (£100M+ ERP, digital infrastructure)</li>
+                        <li>Political Stakeholder Management (C-suite, Board, regulatory bodies)</li>
+                    </ul>
                 </div>
                 <div class="stats">
                     <div class="stat-box">
-                        <div class="number">15+</div>
-                        <div class="label">Years Experience</div>
+                        <div class="number">12+</div>
+                        <div class="label">Years Commercial Expertise</div>
                     </div>
                     <div class="stat-box">
-                        <div class="number">200+</div>
-                        <div class="label">Leaders Coached</div>
+                        <div class="number">£350M+</div>
+                        <div class="label">Commercial Value Delivered</div>
                     </div>
                     <div class="stat-box">
                         <div class="number">50+</div>
-                        <div class="label">Organizations Served</div>
+                        <div class="label">Contracts Managed</div>
                     </div>
                     <div class="stat-box">
-                        <div class="number">95%</div>
-                        <div class="label">Client Satisfaction</div>
+                        <div class="number">£200K+</div>
+                        <div class="label">Annual Value Recovery</div>
                     </div>
                 </div>
             </div>
+
+            <div class="value-prop">
+                <h3>What You Actually Get</h3>
+                <ul>
+                    <li><strong>Someone Who's Done This Before:</strong> I've designed commercial frameworks during rail nationalisation (£80M+), built rebate mechanisms generating £200K+ annually, and managed transformations affecting 65M+ citizens. I'm not theorising - I'm sharing what actually worked when the stakes were real.</li>
+                    <li><strong>Calm Under Pressure:</strong> Government-mandated deadlines, Cabinet Office scrutiny, 9+ stakeholder groups with competing priorities - I've navigated it all. Things work out in the end, but you need someone who can keep perspective when it feels like everything is urgent.</li>
+                    <li><strong>Someone Who Gets the Human Element:</strong> Behind every complex procurement is someone wondering if they can pull it off. Behind every framework is a team navigating change whilst managing their own doubts. I understand both the commercial challenge and what it feels like to be the person delivering it.</li>
+                    <li><strong>Work That Actually Lasts:</strong> My TfL framework is still operational 8+ years later. My rail transition methodology is now industry standard. My approaches become templates because they're built to work in the real world, not just sound good in presentations.</li>
+                    <li><strong>Authenticity and Straight Talk:</strong> I'll tell you what's actually needed, not what sounds impressive. I'll celebrate your team's wins, not just claim credit for results. And if we can't laugh at least once during a high-stakes project, we're both doing it wrong.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section-dark">
+    <!-- Why I Do This Section -->
+    <section class="section-light" style="background: var(--light);">
         <div class="container">
             <div class="section-header">
-                <h2>Services</h2>
+                <h2>Why I Do This</h2>
                 <div class="line"></div>
-                <p>Comprehensive solutions for leadership and organizational excellence</p>
+                <p>What drives me beyond the commercial numbers</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">👤</div>
-                    <h3>Executive Coaching</h3>
-                    <p>One-on-one coaching for C-suite executives and senior leaders to enhance leadership effectiveness and strategic thinking.</p>
-                    <ul>
-                        <li>Leadership presence and impact</li>
-                        <li>Strategic decision-making</li>
-                        <li>Change management</li>
-                        <li>Stakeholder engagement</li>
-                        <li>Work-life integration</li>
-                    </ul>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <h3 style="color: var(--navy); margin-bottom: 1.5rem;">Things Always Work Out in the End</h3>
+                    <p style="color: var(--grey); margin-bottom: 1.5rem; line-height: 1.8;">I spent too much of my early career afraid to compete, afraid to be judged, afraid to show what I could really do. I ran slowly in the race so I wouldn't have to find out if I was good enough. That fear cost me opportunities and, more importantly, confidence.</p>
+                    <p style="color: var(--grey); margin-bottom: 1.5rem; line-height: 1.8;">What changed everything was learning to celebrate the wins - even when they felt small, even when I thought "I should have done this in the first place." That A in Maths on the retake? That mattered. Those distinctions? They counted. Every success, no matter how it arrived, was worth acknowledging.</p>
+                    <p style="color: var(--grey); margin-bottom: 1.5rem; line-height: 1.8;">Now I work on projects where millions of people are affected, where government-mandated deadlines cannot move, where one mistake could disrupt critical services. The stakes are real. But I've learned something important: <strong>there's no need to stress and doubt yourself. Things work out when you focus on doing the work well and supporting the people around you.</strong></p>
                 </div>
-                <div class="service-card">
-                    <div class="icon">👥</div>
-                    <h3>Team Development</h3>
-                    <p>Building high-performing teams through collaborative workshops and structured interventions.</p>
-                    <ul>
-                        <li>Team alignment sessions</li>
-                        <li>Communication effectiveness</li>
-                        <li>Conflict resolution</li>
-                        <li>Trust building</li>
-                        <li>Performance optimization</li>
-                    </ul>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+                        <h4 style="color: var(--navy); margin-bottom: 1rem;">I Celebrate Your Wins</h4>
+                        <p style="color: var(--grey); line-height: 1.6;">I know what it's like to achieve something significant and feel like you can't acknowledge it. When your framework goes live, when your project hits its deadline, when your strategy delivers results - I make sure we stop and recognise it. Success deserves to be celebrated.</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">💬</div>
+                        <h4 style="color: var(--navy); margin-bottom: 1rem;">I Keep It Real</h4>
+                        <p style="color: var(--grey); line-height: 1.6;">High-stakes commercial transformation doesn't require corporate speak and unnecessary complexity. I bring authenticity to the work - clear language, honest conversations, and the ability to laugh even when the pressure is on. If we're not occasionally laughing, we're doing it wrong.</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🤝</div>
+                        <h4 style="color: var(--navy); margin-bottom: 1rem;">I Understand the Human Side</h4>
+                        <p style="color: var(--grey); line-height: 1.6;">Behind every £80M contract portfolio are people wondering if they can deliver. Behind every government deadline is someone managing imposter syndrome whilst trying to lead. I get it. I've been there. And I use that understanding to help teams navigate complexity without losing themselves in it.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="icon">🏢</div>
-                    <h3>Organizational Transformation</h3>
-                    <p>Comprehensive change initiatives to transform culture, processes, and organizational capability.</p>
-                    <ul>
-                        <li>Culture assessment and design</li>
-                        <li>Change strategy development</li>
-                        <li>Leadership alignment</li>
-                        <li>Implementation support</li>
-                        <li>Sustainability planning</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="icon">📊</div>
-                    <h3>Leadership Programs</h3>
-                    <p>Customized leadership development programs for emerging and established leaders.</p>
-                    <ul>
-                        <li>Leadership competency development</li>
-                        <li>Strategic thinking skills</li>
-                        <li>Emotional intelligence</li>
-                        <li>Coaching and feedback</li>
-                        <li>Action learning projects</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🎯</div>
-                    <h3>Strategic Planning</h3>
-                    <p>Facilitation of strategic planning processes to align vision, strategy, and execution.</p>
-                    <ul>
-                        <li>Vision and mission development</li>
-                        <li>Strategic priority setting</li>
-                        <li>Goal alignment</li>
-                        <li>Implementation planning</li>
-                        <li>Progress monitoring</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="icon">💡</div>
-                    <h3>Innovation & Growth</h3>
-                    <p>Building organizational capabilities for innovation, agility, and sustainable growth.</p>
-                    <ul>
-                        <li>Innovation culture development</li>
-                        <li>Design thinking workshops</li>
-                        <li>Agile transformation</li>
-                        <li>Growth mindset cultivation</li>
-                        <li>Continuous improvement</li>
-                    </ul>
+
+                <div style="background: var(--navy); color: white; padding: 2.5rem; border-radius: 10px; text-align: center;">
+                    <h3 style="color: var(--gold); margin-bottom: 1rem;">What Makes Me Different</h3>
+                    <p style="line-height: 1.8; margin-bottom: 0;">I'm not the consultant who was always brilliant at everything. I'm the one who had to work for it, who knows what doubt feels like, who understands that confidence comes from doing the work and supporting others through it. That journey makes me better at what I do - because I understand what you're actually going through, not just the technical challenge on paper.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Methodology Section -->
-    <section id="methodology" class="section-light">
+    <!-- Expertise Section -->
+    <section id="expertise" class="section-dark">
         <div class="container">
             <div class="section-header">
-                <h2>My Approach</h2>
+                <h2>Core Expertise</h2>
                 <div class="line"></div>
-                <p>A proven methodology for sustainable transformation</p>
+                <p>Comprehensive commercial transformation capabilities across regulated environments</p>
             </div>
-            <div class="methodology-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h4>Assess</h4>
-                    <p>Comprehensive assessment of current state, challenges, and opportunities using proven diagnostic tools and methodologies.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h4>Design</h4>
-                    <p>Co-create customized solutions aligned with your strategic objectives and organizational context.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h4>Implement</h4>
-                    <p>Execute initiatives with hands-on support, ensuring adoption and building internal capability.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h4>Sustain</h4>
-                    <p>Embed changes through reinforcement mechanisms, measurement systems, and continuous improvement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Experience & Expertise</h2>
-                <div class="line"></div>
-                <p>Deep experience across industries and organizational contexts</p>
-            </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Industries Served</h3>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="icon">🚄</div>
+                    <h3>Infrastructure Nationalisation</h3>
+                    <p>Commercial transition frameworks for rail nationalisation, public ownership transitions, and corporate restructure.</p>
                     <ul>
-                        <li>Technology & Software</li>
-                        <li>Financial Services</li>
-                        <li>Healthcare & Pharmaceuticals</li>
-                        <li>Manufacturing & Industrial</li>
-                        <li>Professional Services</li>
-                        <li>Non-Profit & Education</li>
+                        <li>£80M+ IT contract portfolio transition</li>
+                        <li>Department for Transport statutory compliance</li>
+                        <li>Multi-stakeholder governance design</li>
+                        <li>Zero operational disruption delivery</li>
+                        <li>Industry template creation</li>
                     </ul>
                 </div>
-                <div class="experience-card">
-                    <h3>Key Competencies</h3>
+                <div class="expertise-card">
+                    <div class="icon">📋</div>
+                    <h3>Framework Design</h3>
+                    <p>Building commercial governance structures and procurement frameworks that generate measurable value recovery.</p>
                     <ul>
-                        <li>Executive coaching & development</li>
-                        <li>Organizational change management</li>
-                        <li>Culture transformation</li>
-                        <li>Strategic facilitation</li>
-                        <li>Team effectiveness</li>
-                        <li>Leadership assessment</li>
+                        <li>£95M framework design (TfL)</li>
+                        <li>£200K+ annual rebate mechanism</li>
+                        <li>Cross-organisational adoption strategy</li>
+                        <li>Value optimisation and cost reduction</li>
+                        <li>Long-term operational sustainability</li>
                     </ul>
                 </div>
-                <div class="experience-card">
-                    <h3>Certifications & Training</h3>
+                <div class="expertise-card">
+                    <div class="icon">💻</div>
+                    <h3>Enterprise Technology</h3>
+                    <p>Strategic procurement for enterprise-wide technology transformation including ERP, digital infrastructure, and platforms.</p>
                     <ul>
-                        <li>ICF Certified Executive Coach</li>
-                        <li>Organizational Development (MA)</li>
-                        <li>Change Management Practitioner</li>
-                        <li>Leadership Circle Profile Certified</li>
-                        <li>Hogan Assessment Certified</li>
-                        <li>Design Thinking Facilitator</li>
+                        <li>Cross-government ERP strategy (£100M+)</li>
+                        <li>National digital identity platforms</li>
+                        <li>Enterprise licensing optimisation (£M+ savings)</li>
+                        <li>Legacy system decommissioning</li>
+                        <li>Contract lifecycle management</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon">⚖️</div>
+                    <h3>Regulatory Compliance</h3>
+                    <p>Multi-regulator environment navigation with expertise in DfT, Cabinet Office, and government statutory compliance.</p>
+                    <ul>
+                        <li>Statutory compliance framework design</li>
+                        <li>Department for Transport submissions</li>
+                        <li>Cabinet Office governance</li>
+                        <li>Audit trail and documentation</li>
+                        <li>Political sensitivity management</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon">🤝</div>
+                    <h3>Stakeholder Management</h3>
+                    <p>C-suite and Board-level commercial advisory across politically complex, multi-stakeholder environments.</p>
+                    <ul>
+                        <li>9+ competing stakeholder groups</li>
+                        <li>Government ministerial briefings</li>
+                        <li>Cross-functional coordination</li>
+                        <li>Senior executive options papers</li>
+                        <li>Media scrutiny management</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <div class="icon">💰</div>
+                    <h3>Value Optimisation</h3>
+                    <p>Commercial innovation focused on measurable value generation, cost reduction, and strategic financial management.</p>
+                    <ul>
+                        <li>£200K+ annual value recovery mechanisms</li>
+                        <li>£M+ licensing cost reduction</li>
+                        <li>Strategic decommissioning savings</li>
+                        <li>Contract portfolio optimisation</li>
+                        <li>Performance governance (KPIs/SLAs)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Results Section -->
-    <section id="results" class="section-light">
+    <!-- Key Achievements Section -->
+    <section id="achievements" class="section-light">
         <div class="container">
             <div class="section-header">
-                <h2>Proven Results</h2>
+                <h2>Key Achievements</h2>
                 <div class="line"></div>
-                <p>Measurable impact for leaders and organizations</p>
+                <p>Precedent-setting commercial work across £350M+ in value</p>
             </div>
-            <div class="results-grid">
-                <div class="result-box">
-                    <div class="metric">40%</div>
-                    <p class="description">Average increase in leadership effectiveness scores</p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="tag">Rail Infrastructure</div>
+                    <h4>Infrastructure Nationalisation Commercial Framework</h4>
+                    <p>Designed and delivered commercial transition framework for £80M+ IT contract portfolio during major rail nationalisation. Created governance mechanisms for Department for Transport statutory submissions, establishing industry template. Built multi-stakeholder oversight methodology coordinating Programme, IT, Legal, Finance, and regulatory teams.</p>
+                    <div class="impact">Impact: 50+ complex contracts transitioned under government-mandated deadline with zero operational disruption. Framework now industry standard for future rail transitions.</div>
                 </div>
-                <div class="result-box">
-                    <div class="metric">85%</div>
-                    <p class="description">Of teams report improved collaboration</p>
+                <div class="achievement-card">
+                    <div class="tag">Transport Infrastructure</div>
+                    <h4>Enterprise Framework Design & Value Generation</h4>
+                    <p>Designed commercial governance structure for £95M technology framework at Transport for London. Created innovative rebate mechanism generating £200K+ in annual value recovery - unprecedented for internal procurement frameworks. Drove framework adoption across TfL business units through strategic stakeholder influence.</p>
+                    <div class="impact">Impact: Framework and value recovery mechanism operational 8+ years later, replicated across other procurement categories. Managed 30+ contracts simultaneously (£100M combined value).</div>
                 </div>
-                <div class="result-box">
-                    <div class="metric">3x</div>
-                    <p class="description">ROI on leadership development investments</p>
+                <div class="achievement-card">
+                    <div class="tag">Government Digital</div>
+                    <h4>National Digital Infrastructure Commercial Strategy</h4>
+                    <p>Led commercial strategy for One Login Programme - the national digital identity platform affecting 65M+ UK citizens. Designed performance frameworks (KPIs/SLAs) for mission-critical mobile infrastructure used by millions daily. Managed cross-functional delivery at Cabinet Office level navigating politically sensitive digital identity environment.</p>
+                    <div class="impact">Impact: Performance frameworks established standard for government digital services. Managed privacy concerns, regulatory oversight, and media scrutiny whilst delivering commercial excellence.</div>
                 </div>
-                <div class="result-box">
-                    <div class="metric">90%</div>
-                    <p class="description">Client engagement renewal rate</p>
+                <div class="achievement-card">
+                    <div class="tag">Enterprise Transformation</div>
+                    <h4>Cross-Government ERP Procurement Strategy</h4>
+                    <p>Designed procurement strategy for cross-government ERP transformation affecting entire UK civil service (100,000+ employees). Created capability framework influencing £100M+ future technology investment. Optimised enterprise licensing delivering £M+ annual cost reduction through strategic right-sizing and descoping.</p>
+                    <div class="impact">Impact: Capability framework influenced subsequent £100M+ ERP tender. Managed complete contract lifecycle from strategic procurement through intelligent closedown.</div>
                 </div>
+                <div class="achievement-card">
+                    <div class="tag">Digital Transformation</div>
+                    <h4>Legacy Platform Decommissioning Strategy</h4>
+                    <p>Led commercial exit strategy for UCAS platform affecting millions of students and hundreds of universities annually. Negotiated complex contract unwinding whilst managing critical service continuity risk during time-sensitive university admissions cycles. Coordinated multi-stakeholder environment across government, universities, and students.</p>
+                    <div class="impact">Impact: Successful decommissioning with zero service disruption during critical admissions cycles. Ongoing annual cost savings through strategic service cessation. Commercial exit methodology became template for GOV.UK platform migrations.</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="tag">Fleet & Infrastructure</div>
+                    <h4>Fleet Services Commercial Transition</h4>
+                    <p>Led commercial workstream for fleet contract transition to public ownership. Managed IT-enabled fleet contracts ensuring service continuity. Supported fleet refurbishment programme aligned to passenger experience improvement whilst navigating multi-organisation governance formalisation.</p>
+                    <div class="impact">Impact: Seamless commercial transition supporting passenger service excellence. Multi-stakeholder coordination across organisations delivering operational continuity.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Studies</h2>
+                <div class="line"></div>
+                <p>Real-world commercial transformation delivery</p>
             </div>
             <div class="case-studies">
                 <div class="case-study">
-                    <div class="industry">Technology</div>
-                    <h4>Global SaaS Company Transformation</h4>
-                    <p>Led comprehensive leadership development program for 50+ executives during rapid growth phase (Series B to IPO).</p>
-                    <div class="outcome">Result: 35% improvement in leadership bench strength, 60% reduction in executive turnover</div>
+                    <div class="sector">Rail Nationalisation</div>
+                    <h4>South Western Railways & West Midlands Railway</h4>
+                    <div class="challenge">
+                        <div class="challenge-label">Challenge:</div>
+                        <p>First major rail nationalisation in decades. Department for Transport mandated February 1st deadline (zero flexibility). 50+ business-critical IT contracts requiring commercial transition. 9 stakeholder groups with competing priorities. Passenger services cannot fail. No existing playbook - precedent-setting work.</p>
+                    </div>
+                    <div class="challenge">
+                        <div class="challenge-label">Approach:</div>
+                        <p>Developed commercial transition framework from first principles. Designed "single source of truth" contract database methodology. Created DfT statutory submission format. Built multi-stakeholder governance coordinating Programme, IT, Legal, Finance, DfT, SWR/WMR leadership, suppliers, and passengers. Operated under political and media scrutiny whilst managing contractual complexity.</p>
+                    </div>
+                    <div class="outcome">
+                        <div class="outcome-label">Outcome:</div>
+                        £80M+ IT contract portfolio transitioned on deadline with zero operational disruption. Database methodology now WMR organisational standard. DfT submission format created industry template for future rail nationalisations. Commercial risk mitigation approach used across WMR. Framework will be referenced for all future rail transitions.
+                    </div>
                 </div>
+
                 <div class="case-study">
-                    <div class="industry">Financial Services</div>
-                    <h4>Executive Team Alignment</h4>
-                    <p>Facilitated strategic alignment and team development for C-suite of regional bank navigating digital transformation.</p>
-                    <div class="outcome">Result: Unified strategic vision, improved decision-making speed by 40%</div>
+                    <div class="sector">Transport Infrastructure</div>
+                    <h4>Transport for London IT Solutions Framework</h4>
+                    <div class="challenge">
+                        <div class="challenge-label">Challenge:</div>
+                        <p>£95M internal technology framework requiring commercial governance. Need to drive adoption across TfL business units (influence without authority). Opportunity for value optimisation but no existing rebate mechanism for internal frameworks. Managing 30+ contracts simultaneously whilst demonstrating framework value.</p>
+                    </div>
+                    <div class="challenge">
+                        <div class="challenge-label">Approach:</div>
+                        <p>Designed comprehensive commercial governance structure for £95M framework. Created innovative rebate mechanism (unprecedented for internal frameworks). Developed strategic stakeholder influence strategy to drive cross-organisational adoption. Established annual review mechanism ensuring ongoing value delivery. Managed £100M combined contract portfolio whilst promoting framework usage.</p>
+                    </div>
+                    <div class="outcome">
+                        <div class="outcome-label">Outcome:</div>
+                        £200,000+ annual value recovery through rebate mechanism. Framework became TfL standard for IT procurement. Rebate mechanism operational 8+ years later and replicated for other frameworks. Framework adoption methodology used across TfL. Demonstrated measurable ROI driving sustained organisational adoption.
+                    </div>
                 </div>
+
                 <div class="case-study">
-                    <div class="industry">Healthcare</div>
-                    <h4>Culture Change Initiative</h4>
-                    <p>Designed and implemented culture transformation program for healthcare system with 5,000+ employees.</p>
-                    <div class="outcome">Result: Employee engagement up 25%, patient satisfaction improved to 95th percentile</div>
+                    <div class="sector">Government Digital</div>
+                    <h4>Cabinet Office One Login Programme</h4>
+                    <div class="challenge">
+                        <div class="challenge-label">Challenge:</div>
+                        <p>National digital identity platform affecting 65 million UK citizens. Cabinet Office level stakeholder management. Politically sensitive (civil liberties, privacy concerns, media scrutiny). Mission-critical mobile infrastructure requiring robust performance governance. Cross-functional coordination across commercial, technical, and delivery teams.</p>
+                    </div>
+                    <div class="challenge">
+                        <div class="challenge-label">Approach:</div>
+                        <p>Led commercial strategy as specialist for One Login Programme. Designed performance frameworks (KPIs/SLAs) for government-wide mobile application. Managed politically sensitive commercial decisions with structured options papers for Cabinet Office senior leadership. Managed cross-functional delivery ensuring alignment. Navigated GDS standards, accessibility requirements, and data protection compliance.</p>
+                    </div>
+                    <div class="outcome">
+                        <div class="outcome-label">Outcome:</div>
+                        Performance frameworks established standard for government digital services. PR contract enabled successful stakeholder engagement for One Login rollout. Mobile app SLAs established benchmarks for mission-critical government infrastructure. Options paper methodology adopted by programme team. Contract management review framework used across programme.
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="sector">Enterprise ERP</div>
+                    <h4>Department for Work & Pensions Cross-Government ERP</h4>
+                    <div class="challenge">
+                        <div class="challenge-label">Challenge:</div>
+                        <p>Cross-government ERP transformation affecting entire UK civil service (100,000+ employees). Not procuring the system but procuring the capability to procure the system - strategic commercial architecture. Enterprise licensing requiring optimisation (£M+ opportunity). Need to influence £100M+ future procurement through capability framework design.</p>
+                    </div>
+                    <div class="challenge">
+                        <div class="challenge-label">Approach:</div>
+                        <p>Designed procurement strategy for enterprise-wide ERP transformation. Created capability framework that strategically influenced subsequent £100M+ procurement. Optimised enterprise licensing through right-sizing and descoping delivering £M+ annual savings. Managed complete contract lifecycle: strategic procurement, ongoing governance, contract extensions, and intelligent closedown.</p>
+                    </div>
+                    <div class="outcome">
+                        <div class="outcome-label">Outcome:</div>
+                        Capability framework design influenced DWP's subsequent ERP tender strategy (£100M+ value). £M+ annual cost reduction through license optimisation. Contract closedown approach became DWP template. Capability-first procurement for complex enterprise systems set precedent. Strategic approach demonstrated how commercial architecture influences major future investments.
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="sector">Digital Transformation</div>
+                    <h4>Department for Education UCAS Decommissioning</h4>
+                    <div class="challenge">
+                        <div class="challenge-label">Challenge:</div>
+                        <p>Major government digital platform affecting millions of students and hundreds of universities annually. Cannot disrupt university admissions - timing risk absolute. External provider requiring commercial exit negotiations. GOV.UK centralisation strategy (digital transformation). Multi-stakeholder coordination: UCAS, DfE, GDS, universities, students.</p>
+                    </div>
+                    <div class="challenge">
+                        <div class="challenge-label">Approach:</div>
+                        <p>Led commercial exit strategy for UCAS platform decommissioning. Designed contract unwinding approach managing critical service continuity during admissions cycles. Navigated complex commercial negotiations with external provider whilst coordinating government digital transformation strategy. Managed hundreds of university stakeholders with service dependency. Ensured zero disruption during critical migration windows.</p>
+                    </div>
+                    <div class="outcome">
+                        <div class="outcome-label">Outcome:</div>
+                        Successful decommissioning without service disruption during critical admissions cycles. Commercial exit methodology became template for future GOV.UK platform migrations. Ongoing annual cost savings from external service cessation. Migration approach referenced for other GOV.UK integrations. Demonstrated how to manage high-risk commercial transitions with absolute service continuity requirements.
+                    </div>
+                </div>
+            </div>
+
+            <div class="methodologies">
+                <h3>Commercial Transformation Methodologies Developed & Deployed</h3>
+                <div class="methodologies-grid">
+                    <div class="methodology-item">
+                        <h4>Infrastructure Nationalisation Framework</h4>
+                        <p>Commercial transition methodology for rail nationalisation creating DfT statutory submission template and multi-stakeholder governance model.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Internal Framework Rebate Mechanism</h4>
+                        <p>£200K+ annual value generation mechanism - first of its kind for internal procurement frameworks, operational 8+ years.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Regulatory Oversight Governance</h4>
+                        <p>Multi-stakeholder governance model for Department for Transport submissions coordinating 9+ competing interest groups.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Contract Database "Single Source of Truth"</h4>
+                        <p>Database methodology for multi-stakeholder contract oversight - now WMR organisational standard.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Capability-First Procurement Strategy</h4>
+                        <p>Cross-government ERP approach strategically procuring capability to procure, influencing £100M+ future investment.</p>
+                    </div>
+                    <div class="methodology-item">
+                        <h4>Legacy Platform Decommissioning</h4>
+                        <p>Service continuity assurance methodology for high-risk commercial exits - template for GOV.UK migrations.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-dark">
+    <section id="contact" class="section-light">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
+                <h2>Let's Talk</h2>
                 <div class="line"></div>
-                <p>Let's discuss how I can help you and your organization achieve your goals</p>
+                <p>Whether you're facing a high-stakes transformation or need someone who's navigated this complexity before, let's have a conversation</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -856,31 +1036,43 @@
                         <div class="icon">📧</div>
                         <div>
                             <p><strong>Email</strong></p>
-                            <p>sid@sidnarayanan.com</p>
+                            <p>Sidnarayanan@hotmail.co.uk</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📱</div>
                         <div>
                             <p><strong>Phone</strong></p>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+44 (0) 7738 737103</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="icon">📍</div>
                         <div>
                             <p><strong>Location</strong></p>
-                            <p>San Francisco Bay Area, CA</p>
-                            <p>Available for remote and on-site engagements worldwide</p>
+                            <p>9 Epirus Mews, Fulham Broadway<br>London, SW6 7UP<br>United Kingdom</p>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">I work across London and Stockholm, bringing international perspective to UK projects.</p>
                         </div>
+                    </div>
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-radius: 8px;">
+                        <p><strong style="color: var(--navy);">Available For:</strong></p>
+                        <ul style="list-style: none; margin-top: 1rem;">
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Commercial strategy for corporate restructures</li>
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Framework design and value optimisation</li>
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Enterprise technology procurement strategy</li>
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Regulatory compliance commercial transformation</li>
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Legacy system decommissioning</li>
+                            <li style="padding: 0.5rem 0; color: var(--grey);">• Political stakeholder management</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form action="#" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="text" name="organization" placeholder="Organization">
-                        <textarea name="message" placeholder="Tell me about your needs and goals..." required></textarea>
+                        <input type="text" name="organisation" placeholder="Organisation">
+                        <input type="text" name="project-type" placeholder="Project Type (e.g. Infrastructure Transition, Framework Design)">
+                        <textarea name="message" placeholder="Describe your commercial transformation needs and timeline..." required></textarea>
                         <button type="submit" class="submit-button">Send Message</button>
                     </form>
                 </div>
@@ -892,11 +1084,12 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/sidnarayanan" target="_blank">in</a>
-                <a href="https://twitter.com/sidnarayanan" target="_blank">𝕏</a>
-                <a href="mailto:sid@sidnarayanan.com">📧</a>
+                <a href="https://linkedin.com/in/sidnarayanan" target="_blank" title="LinkedIn">in</a>
+                <a href="mailto:Sidnarayanan@hotmail.co.uk" title="Email">📧</a>
             </div>
-            <p>&copy; 2026 Sid Narayanan. All rights reserved.</p>
+            <p>&copy; 2026 Sidharth (Sid) Narayanan. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Principal Commercial Transformation Consultant | London & Stockholm</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #64748B;">Things always work out in the end.</p>
         </div>
     </footer>
 </body>
