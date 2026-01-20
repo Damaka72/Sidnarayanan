@@ -423,4 +423,481 @@
 
         .case-study .outcome {
             background: var(--light);
-            padding​​​​​​​​​​​​​​​​
+            padding: 1rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            color: var(--navy);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .contact-item p {
+            color: var(--grey);
+            margin: 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: var(--navy);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: var(--gold);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #94A3B8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 8rem 2rem 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Sid<span>Narayanan</span></div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#methodology">Approach</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#contact" class="cta-button">Get In Touch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sid Narayanan</h1>
+            <p class="subtitle">Leadership Development & Organizational Transformation Consultant</p>
+            <p>Empowering leaders and organizations to achieve sustainable growth through strategic leadership development, organizational transformation, and performance excellence.</p>
+            <a href="#contact" class="cta-button">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Sid</h2>
+                <div class="line"></div>
+                <p>Transforming Organizations Through Leadership Excellence</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Leadership Development Expert</h3>
+                    <p>With over 15 years of experience in leadership development and organizational transformation, I specialize in helping executives, teams, and organizations unlock their full potential and achieve measurable results.</p>
+                    <p>My approach combines proven methodologies with practical, actionable strategies tailored to your unique organizational challenges. I work with clients across industries to develop leadership capabilities, drive cultural change, and build high-performing teams.</p>
+                    <p>Whether you're a C-suite executive looking to enhance your leadership impact, or an organization seeking to transform your culture and performance, I provide the expertise and support to make it happen.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="number">15+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">200+</div>
+                        <div class="label">Leaders Coached</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">50+</div>
+                        <div class="label">Organizations Served</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="number">95%</div>
+                        <div class="label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Services</h2>
+                <div class="line"></div>
+                <p>Comprehensive solutions for leadership and organizational excellence</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">👤</div>
+                    <h3>Executive Coaching</h3>
+                    <p>One-on-one coaching for C-suite executives and senior leaders to enhance leadership effectiveness and strategic thinking.</p>
+                    <ul>
+                        <li>Leadership presence and impact</li>
+                        <li>Strategic decision-making</li>
+                        <li>Change management</li>
+                        <li>Stakeholder engagement</li>
+                        <li>Work-life integration</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="icon">👥</div>
+                    <h3>Team Development</h3>
+                    <p>Building high-performing teams through collaborative workshops and structured interventions.</p>
+                    <ul>
+                        <li>Team alignment sessions</li>
+                        <li>Communication effectiveness</li>
+                        <li>Conflict resolution</li>
+                        <li>Trust building</li>
+                        <li>Performance optimization</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏢</div>
+                    <h3>Organizational Transformation</h3>
+                    <p>Comprehensive change initiatives to transform culture, processes, and organizational capability.</p>
+                    <ul>
+                        <li>Culture assessment and design</li>
+                        <li>Change strategy development</li>
+                        <li>Leadership alignment</li>
+                        <li>Implementation support</li>
+                        <li>Sustainability planning</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Leadership Programs</h3>
+                    <p>Customized leadership development programs for emerging and established leaders.</p>
+                    <ul>
+                        <li>Leadership competency development</li>
+                        <li>Strategic thinking skills</li>
+                        <li>Emotional intelligence</li>
+                        <li>Coaching and feedback</li>
+                        <li>Action learning projects</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🎯</div>
+                    <h3>Strategic Planning</h3>
+                    <p>Facilitation of strategic planning processes to align vision, strategy, and execution.</p>
+                    <ul>
+                        <li>Vision and mission development</li>
+                        <li>Strategic priority setting</li>
+                        <li>Goal alignment</li>
+                        <li>Implementation planning</li>
+                        <li>Progress monitoring</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💡</div>
+                    <h3>Innovation & Growth</h3>
+                    <p>Building organizational capabilities for innovation, agility, and sustainable growth.</p>
+                    <ul>
+                        <li>Innovation culture development</li>
+                        <li>Design thinking workshops</li>
+                        <li>Agile transformation</li>
+                        <li>Growth mindset cultivation</li>
+                        <li>Continuous improvement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Approach</h2>
+                <div class="line"></div>
+                <p>A proven methodology for sustainable transformation</p>
+            </div>
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Assess</h4>
+                    <p>Comprehensive assessment of current state, challenges, and opportunities using proven diagnostic tools and methodologies.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Design</h4>
+                    <p>Co-create customized solutions aligned with your strategic objectives and organizational context.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Implement</h4>
+                    <p>Execute initiatives with hands-on support, ensuring adoption and building internal capability.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Sustain</h4>
+                    <p>Embed changes through reinforcement mechanisms, measurement systems, and continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience & Expertise</h2>
+                <div class="line"></div>
+                <p>Deep experience across industries and organizational contexts</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Industries Served</h3>
+                    <ul>
+                        <li>Technology & Software</li>
+                        <li>Financial Services</li>
+                        <li>Healthcare & Pharmaceuticals</li>
+                        <li>Manufacturing & Industrial</li>
+                        <li>Professional Services</li>
+                        <li>Non-Profit & Education</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>Key Competencies</h3>
+                    <ul>
+                        <li>Executive coaching & development</li>
+                        <li>Organizational change management</li>
+                        <li>Culture transformation</li>
+                        <li>Strategic facilitation</li>
+                        <li>Team effectiveness</li>
+                        <li>Leadership assessment</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h3>Certifications & Training</h3>
+                    <ul>
+                        <li>ICF Certified Executive Coach</li>
+                        <li>Organizational Development (MA)</li>
+                        <li>Change Management Practitioner</li>
+                        <li>Leadership Circle Profile Certified</li>
+                        <li>Hogan Assessment Certified</li>
+                        <li>Design Thinking Facilitator</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Proven Results</h2>
+                <div class="line"></div>
+                <p>Measurable impact for leaders and organizations</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-box">
+                    <div class="metric">40%</div>
+                    <p class="description">Average increase in leadership effectiveness scores</p>
+                </div>
+                <div class="result-box">
+                    <div class="metric">85%</div>
+                    <p class="description">Of teams report improved collaboration</p>
+                </div>
+                <div class="result-box">
+                    <div class="metric">3x</div>
+                    <p class="description">ROI on leadership development investments</p>
+                </div>
+                <div class="result-box">
+                    <div class="metric">90%</div>
+                    <p class="description">Client engagement renewal rate</p>
+                </div>
+            </div>
+            <div class="case-studies">
+                <div class="case-study">
+                    <div class="industry">Technology</div>
+                    <h4>Global SaaS Company Transformation</h4>
+                    <p>Led comprehensive leadership development program for 50+ executives during rapid growth phase (Series B to IPO).</p>
+                    <div class="outcome">Result: 35% improvement in leadership bench strength, 60% reduction in executive turnover</div>
+                </div>
+                <div class="case-study">
+                    <div class="industry">Financial Services</div>
+                    <h4>Executive Team Alignment</h4>
+                    <p>Facilitated strategic alignment and team development for C-suite of regional bank navigating digital transformation.</p>
+                    <div class="outcome">Result: Unified strategic vision, improved decision-making speed by 40%</div>
+                </div>
+                <div class="case-study">
+                    <div class="industry">Healthcare</div>
+                    <h4>Culture Change Initiative</h4>
+                    <p>Designed and implemented culture transformation program for healthcare system with 5,000+ employees.</p>
+                    <div class="outcome">Result: Employee engagement up 25%, patient satisfaction improved to 95th percentile</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="line"></div>
+                <p>Let's discuss how I can help you and your organization achieve your goals</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="icon">📧</div>
+                        <div>
+                            <p><strong>Email</strong></p>
+                            <p>sid@sidnarayanan.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📱</div>
+                        <div>
+                            <p><strong>Phone</strong></p>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <p><strong>Location</strong></p>
+                            <p>San Francisco Bay Area, CA</p>
+                            <p>Available for remote and on-site engagements worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="organization" placeholder="Organization">
+                        <textarea name="message" placeholder="Tell me about your needs and goals..." required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/sidnarayanan" target="_blank">in</a>
+                <a href="https://twitter.com/sidnarayanan" target="_blank">𝕏</a>
+                <a href="mailto:sid@sidnarayanan.com">📧</a>
+            </div>
+            <p>&copy; 2026 Sid Narayanan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
